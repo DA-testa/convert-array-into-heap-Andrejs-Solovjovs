@@ -1,5 +1,5 @@
 # python3
-
+#221RDB442 Andrejs Solovjovs
 
 def build_heap(data):
     swaps = []
@@ -37,24 +37,17 @@ def build_heap(data):
     while not isMinHeap():
         minValue = dataSorted[count] # min(data) nextmin?
         minIndex = data.index(minValue)
-
         parentIndex = parent(minIndex)
-
         while data[parentIndex] > data[minIndex]:
             swap(parentIndex, minIndex)
-            
             minIndex = data.index(minValue)
             parentIndex = parent(minIndex)
-
         count+=1
         if(count>lenSorted-1):
             break
-
     return swaps
 
-
 def main():
-    
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
@@ -81,12 +74,10 @@ def main():
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
 
-
     # output all swaps
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
-
 
 if __name__ == "__main__":
     main()
